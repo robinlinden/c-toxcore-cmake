@@ -1,0 +1,11 @@
+add_library(toxcore_misc_tools
+    ${CMAKE_SOURCE_DIR}/c-toxcore/testing/misc_tools.c
+)
+target_include_directories(toxcore_misc_tools
+    PUBLIC
+        ${CMAKE_SOURCE_DIR}/c-toxcore/testing
+)
+target_link_libraries(toxcore_misc_tools
+    PUBLIC
+        toxcore
+)
