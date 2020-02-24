@@ -8,7 +8,7 @@ FetchContent_Declare(libsodium
 set(SODIUM_DISABLE_TESTS
         ON CACHE INTERNAL "")
 set(SODIUM_MINIMAL
-        ON CACHE INTERNAL "")
+        OFF CACHE INTERNAL "")
 set(SODIUM_PRETEND_TO_BE_CONFIGURED
         ON CACHE INTERNAL "")
 

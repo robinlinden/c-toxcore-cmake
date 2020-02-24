@@ -54,8 +54,6 @@ make_test(version_test)
 # make_test(bootstrap_test) the bootstrap node used in 0.2.10 is down.
 # make_test(tcp_relay_test) the bootstrap node used in 0.2.10 is down.
 # make_test(save_compatibility_test) needs to find its save file.
-# make_test(encryptsave_test) needs toxencryptsave.
-# make_test(file_saving_test) needs toxencryptsave.
 # make_test(conference_av_test) needs toxav.
 # make_test(toxav_basic_test) needs toxav.
 # make_test(toxav_many_test) needs toxav.
