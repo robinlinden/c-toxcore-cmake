@@ -1,9 +1,9 @@
 project(toxencryptsave)
 
-set(ROOT ${CMAKE_SOURCE_DIR}/c-toxcore)
+set(root ../../c-toxcore)
 
 add_library(${PROJECT_NAME}
-    ${ROOT}/toxencryptsave/toxencryptsave.c
+    ${root}/toxencryptsave/toxencryptsave.c
 )
 
 target_link_libraries(${PROJECT_NAME}

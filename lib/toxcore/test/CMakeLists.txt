@@ -1,6 +1,8 @@
+set(root ../../../c-toxcore/auto_tests)
+
 function(make_test name)
     add_executable(${name}
-        ${CMAKE_SOURCE_DIR}/c-toxcore/auto_tests/${name}
+        ${root}/${name}
     )
 
     target_link_libraries(${name}
