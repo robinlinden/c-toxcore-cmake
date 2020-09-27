@@ -1,5 +1,7 @@
 project(toxcore)
 
+find_package(Threads REQUIRED)
+
 set(ROOT ${CMAKE_SOURCE_DIR}/c-toxcore)
 
 add_library(${PROJECT_NAME}
@@ -32,11 +34,10 @@ add_library(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
+        Threads::Threads
         sodium
-        $<$<BOOL:WIN32>:
-            iphlpapi
-            ws2_32
-        >
+        $<$<PLATFORM_ID:Windows>:iphlpapi>
+        $<$<PLATFORM_ID:Windows>:ws2_32>
 )
 
 if(TOXCORE_ENABLE_TESTING)
