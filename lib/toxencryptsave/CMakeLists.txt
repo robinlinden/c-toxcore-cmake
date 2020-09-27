@@ -12,4 +12,6 @@ target_link_libraries(${PROJECT_NAME}
         toxcore
 )
 
-add_subdirectory(test)
+if(TOXCORE_ENABLE_TESTING)
+    add_subdirectory(test)
+endif()
