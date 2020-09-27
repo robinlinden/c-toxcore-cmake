@@ -15,6 +15,7 @@ function(make_test name)
     )
 endfunction()
 
+make_test(bootstrap_test)
 make_test(conference_double_invite_test)
 make_test(conference_peer_nick_test)
 make_test(conference_simple_test)
@@ -43,6 +44,7 @@ make_test(set_name_test)
 make_test(set_status_message_test)
 make_test(skeleton_test)
 make_test(TCP_test)
+make_test(tcp_relay_test)
 make_test(tox_many_tcp_test)
 make_test(tox_many_test)
 make_test(tox_one_test)
@@ -51,8 +53,6 @@ make_test(typing_test)
 make_test(version_test)
 
 # TODO(robinlinden):
-# make_test(bootstrap_test) the bootstrap node used in 0.2.10 is down.
-# make_test(tcp_relay_test) the bootstrap node used in 0.2.10 is down.
 # make_test(save_compatibility_test) needs to find its save file.
 # make_test(conference_av_test) needs toxav.
 # make_test(toxav_basic_test) needs toxav.
