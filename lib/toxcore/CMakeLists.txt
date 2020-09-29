@@ -40,6 +40,13 @@ target_link_libraries(${PROJECT_NAME}
         $<$<PLATFORM_ID:Windows>:ws2_32>
 )
 
+# Work around the cmake target not having the same include structure as the installed library.
+configure_file(${root}/tox.h ${CMAKE_BINARY_DIR}/toxcore_fix/tox/tox.h)
+target_include_directories(${PROJECT_NAME}
+    PUBLIC
+        ${CMAKE_BINARY_DIR}/toxcore_fix/
+)
+
 if(TOXCORE_ENABLE_TESTING)
     add_subdirectory(test)
 endif()
