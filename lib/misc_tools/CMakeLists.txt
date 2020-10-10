@@ -10,4 +10,6 @@ target_include_directories(toxcore_misc_tools
 target_link_libraries(toxcore_misc_tools
     PUBLIC
         toxcore
+    PRIVATE
+        sodium
 )
